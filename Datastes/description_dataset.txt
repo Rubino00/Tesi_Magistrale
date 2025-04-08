@@ -1,0 +1,62 @@
+
+DESCRIZIONE DATASET
+   Column                       Non-Null Count  Dtype
+---  ------                       --------------  -----
+ 0   Unit Weight (kN/m³)          10000 non-null  float64
+ 1   Cohesion (kPa)               10000 non-null  float64
+ 2   Internal Friction Angle (°)  10000 non-null  float64
+ 3   Slope Angle (°)              10000 non-null  float64
+ 4   Slope Height (m)             10000 non-null  float64
+ 5   Pore Water Pressure Ratio    10000 non-null  float64
+ 6   Reinforcement Type           10000 non-null  object
+ 7   Reinforcement Numeric        10000 non-null  int64
+ 8   Factor of Safety (FS)        10000 non-null  float64
+dtypes: float64(7), int64(1), object(1)
+memory usage: 703.2+ KB
+
+None
+Unit Weight (kN/m³)            0
+Cohesion (kPa)                 0
+Internal Friction Angle (°)    0
+Slope Angle (°)                0
+Slope Height (m)               0
+Pore Water Pressure Ratio      0
+Reinforcement Type             0
+Reinforcement Numeric          0
+Factor of Safety (FS)          0
+
+DESCRIZIONE DELLE COLONNE DEL DATASET
+
+Unit Weight (kN/m³):
+valore massimo: 15.00011634755366
+valore minimo: 24.997176732861305
+
+Cohesion (kPa):
+valore massimo: 5.007098506012553
+valore minimo: 49.99661720749295
+
+Internal Friction Angle (°):
+valore massimo: 20.001203097357795
+valore minimo: 44.99752442523079
+
+Slope Angle (°):
+valore massimo: 10.0002768337869
+valore minimo: 59.98946859062976
+
+Slope Height (m):
+valore massimo: 5.000753131607064
+valore minimo: 49.99874663155921
+
+Pore Water Pressure Ratio:
+valore massimo: 8.432211304310044e-06
+valore minimo: 0.9999396960457184
+
+Reinforcement Type:
+valori: ['Drainage' 'Geosynthetics' 'Retaining Wall' 'Soil Nailing']
+
+Reinforcement Numeric:
+valori: [3 2 0 1]
+
+Factor of Safety (FS)
+minimo: 0.5
+massimo: 3.0
