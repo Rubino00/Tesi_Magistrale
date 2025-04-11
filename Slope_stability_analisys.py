@@ -33,6 +33,63 @@ x_test = torch.tensor (x_test , dtype = torch.float32)
 y_train = torch.tensor (np.array (y_train) , dtype = torch.float32).view (-1 , 1)
 y_test = torch.tensor (y_test , dtype = torch.float32).view (-1 , 1)
 
+# definiamo la classe della nostra rete neurale
+class network (torch.nn.Module):
+
+    def __init__ (self , input_dim , hidden_dim , output_dim):
+        super (network , self).__init__ ()
+
+        self.net = torch.nn.Sequential (torch.nn.Linear (input_dim , hidden_dim),
+                                        torch.nn.ReLU (),
+                                        torch.nn.Linear (hidden_dim , output_dim))
+
+    def forward (self , x):
+        return self.net (x)
+
+# definiamo il numero di input e costruiamo la nostra rete
+num_inputs = x_train.shape [1]
+model = network (num_inputs , 64 , 1)
+
+# costruiamo la nostra loss function
+criterion = torch.nn.MSELoss ()
+
+# costruiamo l'ottimizzatore
+optimizer = torch.optim.Adam (model.parameters () , lr = 0.001)
+
+num_epochs = 200
+loss_list = []
+
+for epoch in range (num_epochs):
+
+    # attiviamo la modalità di training del modello
+    model.train ()
+
+    # annulliamo i vari gradienti della rete neurale
+    optimizer.zero_grad ()
+
+    # definiamo gli output
+    output = model (x_train)
+
+    # calocliamo la il valore della loss
+    loss = criterion (output , y_train)
+
+    # facciamo la backpropagation
+    loss.backward ()
+
+    # aggiorniamo i pesi
+    optimizer.step ()
+
+    # stampiamo ad ogni passaggio il valore di loss
+    print (f"loss function val: {loss.item ()}")
+    loss_list.append (loss.item ())
+
+plt.plot (loss_list)
+plt.show ()
+
+
+
+
+
 
 
 
