@@ -1,0 +1,403 @@
+informazioni generali del dataset:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 399 entries, 0 to 398
+Data columns (total 33 columns):
+ #   Column      Non-Null Count  Dtype
+---  ------      --------------  -----
+ 0   school      399 non-null    object
+ 1   sex         399 non-null    object
+ 2   age         399 non-null    int64
+ 3   address     399 non-null    object
+ 4   famsize     399 non-null    object
+ 5   Pstatus     399 non-null    object
+ 6   Medu        399 non-null    int64
+ 7   Fedu        399 non-null    int64
+ 8   Mjob        399 non-null    object
+ 9   Fjob        399 non-null    object
+ 10  reason      399 non-null    object
+ 11  guardian    399 non-null    object
+ 12  traveltime  399 non-null    int64
+ 13  studytime   399 non-null    int64
+ 14  failures    399 non-null    int64
+ 15  schoolsup   399 non-null    object
+ 16  famsup      399 non-null    object
+ 17  paid        399 non-null    object
+ 18  activities  399 non-null    object
+ 19  nursery     399 non-null    object
+ 20  higher      399 non-null    object
+ 21  internet    399 non-null    object
+ 22  romantic    399 non-null    object
+ 23  famrel      399 non-null    int64
+ 24  freetime    399 non-null    int64
+ 25  goout       399 non-null    int64
+ 26  Dalc        399 non-null    int64
+ 27  Walc        399 non-null    int64
+ 28  health      399 non-null    int64
+ 29  absences    399 non-null    int64
+ 30  G1          399 non-null    int64
+ 31  G2          399 non-null    int64
+ 32  G3          399 non-null    int64
+dtypes: int64(16), object(17)
+memory usage: 103.0+ KB
+school        0
+sex           0
+age           0
+address       0
+famsize       0
+Pstatus       0
+Medu          0
+Fedu          0
+Mjob          0
+Fjob          0
+reason        0
+guardian      0
+traveltime    0
+studytime     0
+failures      0
+schoolsup     0
+famsup        0
+paid          0
+activities    0
+nursery       0
+higher        0
+internet      0
+romantic      0
+famrel        0
+freetime      0
+goout         0
+Dalc          0
+Walc          0
+health        0
+absences      0
+G1            0
+G2            0
+G3            0
+dtype: int64
+   school sex  age address famsize Pstatus  ...  Walc  health absences  G1  G2  G3
+0      GP   F   18       U     GT3       A  ...     1       3        6   5   6   6
+1      GP   F   17       U     GT3       T  ...     1       3        4   5   5   6
+2      GP   F   15       U     LE3       T  ...     3       3       10   7   8  10
+3      GP   F   15       U     GT3       T  ...     1       5        2  15  14  15
+4      GP   F   16       U     GT3       T  ...     2       5        4   6  10  10
+5      GP   M   16       U     LE3       T  ...     2       5       10  15  15  15
+6      GP   M   16       U     LE3       T  ...     1       3        0  12  12  11
+7      GP   F   17       U     GT3       A  ...     1       1        6   6   5   6
+8      GP   M   15       U     LE3       A  ...     1       1        0  16  18  19
+9      GP   M   15       U     GT3       T  ...     1       5        0  14  15  15
+10     GP   F   15       U     GT3       T  ...     2       2        0  10   8   9
+11     GP   F   15       U     GT3       T  ...     1       4        4  10  12  12
+12     GP   M   15       U     LE3       T  ...     3       5        2  14  14  14
+13     GP   M   15       U     GT3       T  ...     2       3        2  10  10  11
+14     GP   M   15       U     GT3       A  ...     1       3        0  14  16  16
+15     GP   F   16       U     GT3       T  ...     2       2        4  14  14  14
+16     GP   F   16       U     GT3       T  ...     2       2        6  13  14  14
+17     GP   F   16       U     GT3       T  ...     1       4        4   8  10  10
+18     GP   M   17       U     GT3       T  ...     4       5       16   6   5   5
+19     GP   M   16       U     LE3       T  ...     3       5        4   8  10  10
+20     GP   M   15       U     GT3       T  ...     1       1        0  13  14  15
+21     GP   M   15       U     GT3       T  ...     1       5        0  12  15  15
+22     GP   M   16       U     LE3       T  ...     3       5        2  15  15  16
+23     GP   M   16       U     LE3       T  ...     4       5        0  13  13  12
+24     GP   F   15       R     GT3       T  ...     1       5        2  10   9   8
+25     GP   F   16       U     GT3       T  ...     3       5       14   6   9   8
+26     GP   M   15       U     GT3       T  ...     2       5        2  12  12  11
+27     GP   M   15       U     GT3       T  ...     4       1        4  15  16  15
+28     GP   M   16       U     LE3       A  ...     1       5        4  11  11  11
+29     GP   M   16       U     GT3       T  ...     5       5       16  10  12  11
+
+[30 rows x 33 columns]
+informazioni per colonna:
+colonna: school
+count     399
+unique      2
+top        GP
+freq      349
+Name: school, dtype: object
+
+colonna: sex
+count     399
+unique      2
+top         F
+freq      208
+Name: sex, dtype: object
+
+colonna: age
+count    399.000000
+mean      16.709273
+std        1.278225
+min       15.000000
+25%       16.000000
+50%       17.000000
+75%       18.000000
+max       22.000000
+Name: age, dtype: float64
+
+colonna: address
+count     399
+unique      2
+top         U
+freq      311
+Name: address, dtype: object
+
+colonna: famsize
+count     399
+unique      2
+top       GT3
+freq      285
+Name: famsize, dtype: object
+
+colonna: Pstatus
+count     399
+unique      2
+top         T
+freq      358
+Name: Pstatus, dtype: object
+
+colonna: Medu
+count    399.000000
+mean       2.761905
+std        1.096340
+min        0.000000
+25%        2.000000
+50%        3.000000
+75%        4.000000
+max        4.000000
+Name: Medu, dtype: float64
+
+colonna: Fedu
+count    399.000000
+mean       2.536341
+std        1.092716
+min        0.000000
+25%        2.000000
+50%        3.000000
+75%        3.500000
+max        4.000000
+Name: Fedu, dtype: float64
+
+colonna: Mjob
+count       399
+unique        5
+top       other
+freq        141
+Name: Mjob, dtype: object
+
+colonna: Fjob
+count       399
+unique        5
+top       other
+freq        218
+Name: Fjob, dtype: object
+
+colonna: reason
+count        399
+unique         4
+top       course
+freq         147
+Name: reason, dtype: object
+
+colonna: guardian
+count        399
+unique         3
+top       mother
+freq         277
+Name: guardian, dtype: object
+
+colonna: traveltime
+count    399.000000
+mean       1.443609
+std        0.695429
+min        1.000000
+25%        1.000000
+50%        1.000000
+75%        2.000000
+max        4.000000
+Name: traveltime, dtype: float64
+
+colonna: studytime
+count    399.000000
+mean       2.035088
+std        0.835020
+min        1.000000
+25%        1.000000
+50%        2.000000
+75%        2.000000
+max        4.000000
+Name: studytime, dtype: float64
+
+colonna: failures
+count    399.000000
+mean       0.330827
+std        0.740655
+min        0.000000
+25%        0.000000
+50%        0.000000
+75%        0.000000
+max        3.000000
+Name: failures, dtype: float64
+
+colonna: schoolsup
+count     399
+unique      2
+top        no
+freq      348
+Name: schoolsup, dtype: object
+
+colonna: famsup
+count     399
+unique      2
+top       yes
+freq      242
+Name: famsup, dtype: object
+
+colonna: paid
+count     399
+unique      2
+top        no
+freq      218
+Name: paid, dtype: object
+
+colonna: activities
+count     399
+unique      2
+top       yes
+freq      201
+Name: activities, dtype: object
+
+colonna: nursery
+count     399
+unique      2
+top       yes
+freq      314
+Name: nursery, dtype: object
+
+colonna: higher
+count     399
+unique      2
+top       yes
+freq      379
+Name: higher, dtype: object
+
+colonna: internet
+count     399
+unique      2
+top       yes
+freq      329
+Name: internet, dtype: object
+
+colonna: romantic
+count     399
+unique      2
+top        no
+freq      267
+Name: romantic, dtype: object
+
+colonna: famrel
+count    399.000000
+mean       3.954887
+std        0.898335
+min        1.000000
+25%        4.000000
+50%        4.000000
+75%        5.000000
+max        5.000000
+Name: famrel, dtype: float64
+
+colonna: freetime
+count    399.000000
+mean       3.233083
+std        0.994107
+min        1.000000
+25%        3.000000
+50%        3.000000
+75%        4.000000
+max        5.000000
+Name: freetime, dtype: float64
+
+colonna: goout
+count    399.000000
+mean       3.097744
+std        1.113178
+min        1.000000
+25%        2.000000
+50%        3.000000
+75%        4.000000
+max        5.000000
+Name: goout, dtype: float64
+
+colonna: Dalc
+count    399.000000
+mean       1.476190
+std        0.887552
+min        1.000000
+25%        1.000000
+50%        1.000000
+75%        2.000000
+max        5.000000
+Name: Dalc, dtype: float64
+
+colonna: Walc
+count    399.000000
+mean       2.288221
+std        1.281737
+min        1.000000
+25%        1.000000
+50%        2.000000
+75%        3.000000
+max        5.000000
+Name: Walc, dtype: float64
+
+colonna: health
+count    399.000000
+mean       3.558897
+std        1.384013
+min        1.000000
+25%        3.000000
+50%        4.000000
+75%        5.000000
+max        5.000000
+Name: health, dtype: float64
+
+colonna: absences
+count    399.000000
+mean       5.651629
+std        7.983113
+min        0.000000
+25%        0.000000
+50%        4.000000
+75%        8.000000
+max       75.000000
+Name: absences, dtype: float64
+
+colonna: G1
+count    399.000000
+mean      10.879699
+std        3.315195
+min        3.000000
+25%        8.000000
+50%       11.000000
+75%       13.000000
+max       19.000000
+Name: G1, dtype: float64
+
+colonna: G2
+count    399.000000
+mean      10.676692
+std        3.760845
+min        0.000000
+25%        8.500000
+50%       11.000000
+75%       13.000000
+max       19.000000
+Name: G2, dtype: float64
+
+colonna: G3
+count    399.000000
+mean      10.380952
+std        4.571073
+min        0.000000
+25%        8.000000
+50%       11.000000
+75%       13.500000
+max       20.000000
+Name: G3, dtype: float64
