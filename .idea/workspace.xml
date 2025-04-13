@@ -32,16 +32,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Analisi_wine.executor": "Run",
-    "Python.Prova.executor": "Run",
-    "Python.Slope_stability_analisys.executor": "Run",
-    "Python.Student_analisys.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Analisi_wine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prova.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Slope_stability_analisys.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Student_analisys.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fraru\OneDrive\Desktop\programmi\Clone_python\Tesi_magistrale\Datastes\Student_dataset" />

@@ -5,7 +5,10 @@ import matplotlib.pyplot as plt
 import seaborn as sbn
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error , r2_score
 import torch
+import shap
+
 
 # importiamo il dataset dei nostri studenti. COn questo dataset analizzeremo le performanche degli studenti in matematica
 file_path = "C:\\Users\\fraru\OneDrive\Desktop\programmi\Clone_python\Tesi_magistrale\Datastes\Student_dataset\Math-Students.csv"
@@ -76,7 +79,10 @@ x_test = torch.tensor (data = np.array (x_test) , dtype = torch.float32)
 y_train = torch.tensor (data = np.array (y_train) , dtype = torch.float32).view (-1 , 1)
 y_test = torch.tensor (data = np.array (y_test) , dtype = torch.float32).view (-1 , 1)
 
-# scriavimo la nostra rete neurale
+# scriavimo la nostra rete neurale la rete neurale ha le seguenti caratteristiche:
+# - 3 hidden layer con un numero di neuroni da specificare neuroni
+# - come funzione di attivazione usiamo la ReLU
+# - come strato finale si prevede un singolo neurone che restituisce il valore di valutazione predetto
 class network (torch.nn.Module):
 
     def __init__ (self , input_layer , hidden_layer , output_layer):
@@ -84,18 +90,23 @@ class network (torch.nn.Module):
 
         self.net = torch.nn.Sequential (torch.nn.Linear (input_layer , hidden_layer),
                                         torch.nn.ReLU (),
+                                        torch.nn.Linear (hidden_layer , hidden_layer),
+                                        torch.nn.ReLU (),
+                                        torch.nn.Linear(hidden_layer, hidden_layer),
+                                        torch.nn.ReLU (),
                                         torch.nn.Linear (hidden_layer , output_layer))
 
     def forward (self , x):
         return self.net (x)
 
 # per questo algoritmo utilizziamo come loss function la MSE e come optimizer Adam, costruiamo la nostra rete neurale
+# definiamo 64 neuroni per tutti gli hidden layer
 model = network (x_train.shape [1] , 64 , 1)
 criterion = torch.nn.MSELoss ()
 optimizer = torch.optim.Adam (model.parameters ())
 
 # definiamo il processo di allenamento. Per ogni step prendiamo tutti il dataset e facciamo forward e backpropagation
-epochs = 200
+epochs = 300
 loss_list = []
 
 for epoch in range (epochs):
@@ -116,13 +127,46 @@ for epoch in range (epochs):
     print (f"valore di MSE: {loss.item ()}")
     loss_list.append (loss.item ())
 
-# plottiamo il valore di errore per ogni epoca
-plt.plot (loss_list)
-plt.show ()
+# con queta funzione plottiamo l'andamento della loss function per epoca
+def plot_loss (loss_list):
+
+    fig_1 = plt.figure ()
+    graph_1 = fig_1.add_subplot ()
+    graph_1.plot (loss_list)
+    graph_1.set_title ("andamento della loss")
+    graph_1.set_xlabel ("epoch")
+    graph_1.set_ylabel ("loss value")
+    plt.show ()
+
+# con questa funzione facciamo la validazione del modello con i dati di "x_test"  e "y_test"
+def validation (results , y_test):
+
+    # plottiamo il grafico di validazione per avere una idea qualitativa del risultato della previsione
+    fig_2 = plt.figure()
+    graph_2 = fig_2.add_subplot()
+    graph_2.scatter(results.detach().numpy(), y_test.detach().numpy())
+    graph_2.plot([0, 20], [0, 20])
+    graph_2.set_xlabel("calculated")
+    graph_2.set_ylabel("target")
+    plt.show()
+
+    # calcoliamo l'MSE e l'R quadro
+    mse = mean_squared_error(y_test, results)
+    r2 = r2_score(y_test, results)
+
+    # mandiamo a schermo tutte le informazioni relative alla validazione
+    print("metriche di valutazione del modello:")
+    print(f"mean squared error: {mse}")
+    print(f"R quadro: {r2}")
 
 
+# valutiamo le performance della nostra rete con i dati di validazione "x_test" e "y_test"
+model.eval()
+with torch.no_grad():
+    results = model(x_test)
 
-
+validation (results , y_test)
+plot_loss (loss_list)
 
 
 
