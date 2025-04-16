@@ -1,0 +1,243 @@
+
+
+DESCRIZIONE DELLE COLONNE DEL DATAFRAME
+
+CRIM per capita crime rate by town
+ZN proportion of residential land zoned for lots over 25,000 sq.ft.
+INDUS proportion of non-retail business acres per town
+CHAS Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+NOX nitric oxides concentration (parts per 10 million)
+RM average number of rooms per dwelling
+AGE proportion of owner-occupied units built prior to 1940
+DIS weighted distances to five Boston employment centres
+RAD index of accessibility to radial highways
+TAX full-value property-tax rate per $10,000
+PTRATIO pupil-teacher ratio by town
+B 1000(Bk-0.63)^2 where Bk is the proportion of blacks by town
+LSTAT % lower status of the population
+MEDV Median value of owner-occupied homes in $1000's
+
+INFORAMZIONI DEL DATAFRAME PROCESSATO:
+
+RangeIndex: 505 entries, 0 to 504
+Data columns (total 14 columns):
+ #   Column   Non-Null Count  Dtype
+---  ------   --------------  -----
+ 0   CRIM     505 non-null    float64
+ 1   ZN       505 non-null    float64
+ 2   INDUS    505 non-null    float64
+ 3   CHAS     505 non-null    float64
+ 4   NOX      505 non-null    float64
+ 5   RM       505 non-null    float64
+ 6   AGE      505 non-null    float64
+ 7   DIS      505 non-null    float64
+ 8   RAD      505 non-null    float64
+ 9   TAX      505 non-null    float64
+ 10  PTRATIO  505 non-null    float64
+ 11  B        505 non-null    float64
+ 12  LSTAT    505 non-null    float64
+ 13  MEDV     505 non-null    float64
+dtypes: float64(14)
+memory usage: 55.4 KB
+None
+CRIM       0
+ZN         0
+INDUS      0
+CHAS       0
+NOX        0
+RM         0
+AGE        0
+DIS        0
+RAD        0
+TAX        0
+PTRATIO    0
+B          0
+LSTAT      0
+MEDV       0
+dtype: int64
+       CRIM    ZN  INDUS  CHAS    NOX  ...    TAX  PTRATIO       B  LSTAT  MEDV
+0   0.02731   0.0   7.07   0.0  0.469  ...  242.0     17.8  396.90   9.14  21.6
+1   0.02729   0.0   7.07   0.0  0.469  ...  242.0     17.8  392.83   4.03  34.7
+2   0.03237   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.63   2.94  33.4
+3   0.06905   0.0   2.18   0.0  0.458  ...  222.0     18.7  396.90   5.33  36.2
+4   0.02985   0.0   2.18   0.0  0.458  ...  222.0     18.7  394.12   5.21  28.7
+5   0.08829  12.5   7.87   0.0  0.524  ...  311.0     15.2  395.60  12.43  22.9
+6   0.14455  12.5   7.87   0.0  0.524  ...  311.0     15.2  396.90  19.15  27.1
+7   0.21124  12.5   7.87   0.0  0.524  ...  311.0     15.2  386.63  29.93  16.5
+8   0.17004  12.5   7.87   0.0  0.524  ...  311.0     15.2  386.71  17.10  18.9
+9   0.22489  12.5   7.87   0.0  0.524  ...  311.0     15.2  392.52  20.45  15.0
+10  0.11747  12.5   7.87   0.0  0.524  ...  311.0     15.2  396.90  13.27  18.9
+11  0.09378  12.5   7.87   0.0  0.524  ...  311.0     15.2  390.50  15.71  21.7
+12  0.62976   0.0   8.14   0.0  0.538  ...  307.0     21.0  396.90   8.26  20.4
+13  0.63796   0.0   8.14   0.0  0.538  ...  307.0     21.0  380.02  10.26  18.2
+14  0.62739   0.0   8.14   0.0  0.538  ...  307.0     21.0  395.62   8.47  19.9
+15  1.05393   0.0   8.14   0.0  0.538  ...  307.0     21.0  386.85   6.58  23.1
+16  0.78420   0.0   8.14   0.0  0.538  ...  307.0     21.0  386.75  14.67  17.5
+17  0.80271   0.0   8.14   0.0  0.538  ...  307.0     21.0  288.99  11.69  20.2
+18  0.72580   0.0   8.14   0.0  0.538  ...  307.0     21.0  390.95  11.28  18.2
+19  1.25179   0.0   8.14   0.0  0.538  ...  307.0     21.0  376.57  21.02  13.6
+20  0.85204   0.0   8.14   0.0  0.538  ...  307.0     21.0  392.53  13.83  19.6
+21  1.23247   0.0   8.14   0.0  0.538  ...  307.0     21.0  396.90  18.72  15.2
+22  0.98843   0.0   8.14   0.0  0.538  ...  307.0     21.0  394.54  19.88  14.5
+23  0.75026   0.0   8.14   0.0  0.538  ...  307.0     21.0  394.33  16.30  15.6
+24  0.84054   0.0   8.14   0.0  0.538  ...  307.0     21.0  303.42  16.51  13.9
+25  0.67191   0.0   8.14   0.0  0.538  ...  307.0     21.0  376.88  14.81  16.6
+26  0.95577   0.0   8.14   0.0  0.538  ...  307.0     21.0  306.38  17.28  14.8
+27  0.77299   0.0   8.14   0.0  0.538  ...  307.0     21.0  387.94  12.80  18.4
+28  1.00245   0.0   8.14   0.0  0.538  ...  307.0     21.0  380.23  11.98  21.0
+29  1.13081   0.0   8.14   0.0  0.538  ...  307.0     21.0  360.17  22.60  12.7
+
+[30 rows x 14 columns]
+colonna CRIM:
+count    505.000000
+mean       3.620667
+std        8.608572
+min        0.009060
+25%        0.082210
+50%        0.259150
+75%        3.678220
+max       88.976200
+Name: CRIM, dtype: float64
+
+colonna ZN:
+count    505.000000
+mean      11.350495
+std       23.343704
+min        0.000000
+25%        0.000000
+50%        0.000000
+75%       12.500000
+max      100.000000
+Name: ZN, dtype: float64
+
+colonna INDUS:
+count    505.000000
+mean      11.154257
+std        6.855868
+min        0.460000
+25%        5.190000
+50%        9.690000
+75%       18.100000
+max       27.740000
+Name: INDUS, dtype: float64
+
+colonna CHAS:
+count    505.000000
+mean       0.069307
+std        0.254227
+min        0.000000
+25%        0.000000
+50%        0.000000
+75%        0.000000
+max        1.000000
+Name: CHAS, dtype: float64
+
+colonna NOX:
+count    505.000000
+mean       0.554728
+std        0.115990
+min        0.385000
+25%        0.449000
+50%        0.538000
+75%        0.624000
+max        0.871000
+Name: NOX, dtype: float64
+
+colonna RM:
+count    505.000000
+mean       6.284059
+std        0.703195
+min        3.561000
+25%        5.885000
+50%        6.208000
+75%        6.625000
+max        8.780000
+Name: RM, dtype: float64
+
+colonna AGE:
+count    505.000000
+mean      68.581584
+std       28.176371
+min        2.900000
+25%       45.000000
+50%       77.700000
+75%       94.100000
+max      100.000000
+Name: AGE, dtype: float64
+
+colonna DIS:
+count    505.000000
+mean       3.794459
+std        2.107757
+min        1.129600
+25%        2.100000
+50%        3.199200
+75%        5.211900
+max       12.126500
+Name: DIS, dtype: float64
+
+colonna RAD:
+count    505.000000
+mean       9.566337
+std        8.707553
+min        1.000000
+25%        4.000000
+50%        5.000000
+75%       24.000000
+max       24.000000
+Name: RAD, dtype: float64
+
+colonna TAX:
+count    505.000000
+mean     408.459406
+std      168.629992
+min      187.000000
+25%      279.000000
+50%      330.000000
+75%      666.000000
+max      711.000000
+Name: TAX, dtype: float64
+
+colonna PTRATIO:
+count    505.000000
+mean      18.461782
+std        2.162520
+min       12.600000
+25%       17.400000
+50%       19.100000
+75%       20.200000
+max       22.000000
+Name: PTRATIO, dtype: float64
+
+colonna B:
+count    505.000000
+mean     356.594376
+std       91.367787
+min        0.320000
+25%      375.330000
+50%      391.430000
+75%      396.210000
+max      396.900000
+Name: B, dtype: float64
+
+colonna LSTAT:
+count    505.000000
+mean      12.668257
+std        7.139950
+min        1.730000
+25%        7.010000
+50%       11.380000
+75%       16.960000
+max       37.970000
+Name: LSTAT, dtype: float64
+
+colonna MEDV:
+count    505.000000
+mean      22.529901
+std        9.205991
+min        5.000000
+25%       17.000000
+50%       21.200000
+75%       25.000000
+max       50.000000
+Name: MEDV, dtype: float64
