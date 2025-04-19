@@ -1,7 +1,12 @@
 
+#Importiamo le varie librerie di nostro interesse
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+import seaborn as sbn
 
 input_path = "C:\\Users\\fraru\OneDrive\Desktop\programmi\Clone_python\Tesi_magistrale\Datastes\House_prices\House_prices_dataset.csv"
 df = pd.read_csv (input_path)
@@ -19,6 +24,33 @@ def info_columns (df:pd.DataFrame):
         print (df [column].describe ())
         print ()
 
+# definiamo una funzione che fa una validazione:
+def validation (results , y_test):
+    print (f"scarto quadratico medio: {mean_squared_error (results , y_test)}")
+    print (f"R quadro: {r2_score (results , y_test)}")
+
+    # disegniamo un piano riportante sull'asse orizzontale i valori predetti e sull'asse verticale i valori reali
+    # disegnamo inoltre la retta bisetrice del primo quadrante
+    figure_1 = plt.figure ()
+    graph_1 = figure_1.add_subplot ()
+    graph_1.scatter (results , y_test)
+    max_val = max (max (results) , max (y_test))
+    graph_1.plot ([0 , max_val] , [0 , max_val])
+    graph_1.set_xlabel ("results")
+    graph_1.set_ylabel ("y test")
+    graph_1.set_title ("grafico di correzazione")
+    plt.show ()
+
+# con la presente funzione cerchiamo di spiegare il modello
+def describe_model (model:LinearRegression , x_test , y_test):
+    print ("valori dei parametri del modello")
+    print (model.coef_)
+    print ("\nnumero coefficienti:")
+    print (len (model.coef_))
+    print ("\nvalore intercetta")
+    print (model.intercept_)
+    print ("\nvalore R^2")
+    print (model.score (x_test , y_test))
 
 # definiamo un nuovo dataframe contenente tutte le variabili ordinate in diverse colonne ogniuna relativa
 # a diverse features. Le colonne in questione vengono elencate di seguito:
@@ -66,6 +98,27 @@ def separate_string (string_row:str):
 # applichiamo ad ogni riga del nostro dataframe la funzione "separate_string" per scrivere il nostro dizionario
 df.iloc [: , 0].apply (separate_string)
 new_df = pd.DataFrame (new_df_dict)
-info_df (new_df)
-info_columns (new_df)
+print (new_df.columns)
 
+# definiamo un set contenente le features di input e unaltro set per i taeget. Dopo ogniuno di questi va splittato in
+# una parte da utilizzare per il training e un'altra parte per il test
+# provaimo a fare la predizione sulle seguenti colonne: RM, DIS, TEX, RAD e LSTAT
+columns_of_interest = ["RM" , "DIS" , "TAX" , "RAD" , "LSTAT"]
+x_set = new_df [columns_of_interest]
+y_set = new_df ["MEDV"]
+
+x_train , x_test , y_train , y_test = train_test_split (x_set , y_set , random_state = 42 , test_size = 0.5)
+
+# creiamo il modello e determiniamo i sui parametri
+model = LinearRegression ()
+model.fit (x_train , y_train)
+y_pred = model.predict (x_test)
+
+# creiamo un algoritmo in grado di definire la relazione lineare tra tutte le colonne del dataframe e la colonna VMED
+col_input = new_df.columns [:-1]
+for column in columns_of_interest:
+    plot = sbn.scatterplot (data = new_df , x = column , y = "MEDV")
+    plot.set_xlabel (column)
+    plot.set_ylabel ("MEDV")
+    plot.set_title (f"correlazione tra {column} e MEDV")
+    plt.show ()
