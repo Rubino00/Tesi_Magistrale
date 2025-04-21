@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f36c8f5-cf55-4fd6-888d-5b0a7d668195" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diabetes_analisys.py" beforeDir="false" afterPath="$PROJECT_DIR$/Diabetes_analisys.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Analisi_wine.executor&quot;: &quot;Run&quot;,
-    &quot;Python.House_prices.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Prova.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Slope_stability_analisys.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Student_analisys.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Analisi_wine.executor": "Run",
+    "Python.Diabetes_analisys.executor": "Run",
+    "Python.House_prices.executor": "Run",
+    "Python.Prova.executor": "Run",
+    "Python.Slope_stability_analisys.executor": "Run",
+    "Python.Student_analisys.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fraru\OneDrive\Desktop\programmi\Clone_python\Tesi_magistrale\Datastes\Diabetes_dataset" />

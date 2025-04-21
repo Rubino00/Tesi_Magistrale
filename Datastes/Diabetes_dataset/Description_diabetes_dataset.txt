@@ -1,0 +1,397 @@
+
+
+DESCRIZIONE DELLE COLONNE
+Dataset Overview
+Number of Columns: 20
+Number of Rows: 152 (including the header row)
+Type of Data: Tabular data with mixed numerical and categorical variables.
+Purpose: The dataset appears to be designed for studying diabetes risk factors, including demographic, lifestyle, and clinical measures.
+Column Descriptions:
+
+columns list = 'Age', 'Sex', 'Ethnicity', 'BMI', 'Waist_Circumference',
+               'Fasting_Blood_Glucose', 'HbA1c', 'Blood_Pressure_Systolic',
+               'Blood_Pressure_Diastolic', 'Cholesterol_Total', 'Cholesterol_HDL',
+               'Cholesterol_LDL', 'GGT', 'Serum_Urate', 'Physical_Activity_Level',
+               'Dietary_Intake_Calories', 'Alcohol_Consumption', 'Smoking_Status',
+               'Family_History_of_Diabetes', 'Previous_Gestational_Diabetes'
+
+Age:
+
+Type: Numerical
+Description: Age of the individual in years.
+Sex:
+
+Type: Categorical
+Description: Gender of the individual (e.g., Male, Female).
+Ethnicity:
+
+Type: Categorical
+Description: Ethnic background (e.g., White, Asian, Black, Hispanic).
+BMI (Body Mass Index):
+
+Type: Numerical
+Description: A measure of body fat based on weight and height.
+Waist Circumference:
+
+Type: Numerical
+Description: Measurement of waist size in centimeters.
+Fasting Blood Glucose:
+
+Type: Numerical
+Description: Blood glucose levels after fasting, measured in mg/dL.
+HbA1c:
+
+Type: Numerical
+Description: Glycated hemoglobin percentage, indicating average blood sugar levels over the past 2–3 months.
+Blood Pressure Systolic:
+
+Type: Numerical
+Description: Systolic blood pressure (top number), measured in mmHg.
+Blood Pressure Diastolic:
+
+Type: Numerical
+Description: Diastolic blood pressure (bottom number), measured in mmHg.
+Cholesterol Total:
+
+Type: Numerical
+Description: Total cholesterol level in mg/dL.
+Cholesterol HDL (High-Density Lipoprotein):
+
+Type: Numerical
+Description: "Good" cholesterol level in mg/dL.
+Cholesterol LDL (Low-Density Lipoprotein):
+
+Type: Numerical
+Description: "Bad" cholesterol level in mg/dL.
+GGT (Gamma-Glutamyl Transferase):
+
+Type: Numerical
+Description: Liver enzyme level indicative of liver function or damage.
+Serum Urate:
+
+Type: Numerical
+Description: Uric acid levels in the blood, measured in mg/dL.
+Physical Activity Level:
+
+Type: Categorical
+Description: Level of physical activity (e.g., Low, Moderate, High).
+Dietary Intake Calories:
+
+Type: Numerical
+Description: Daily calorie intake in kilocalories.
+Alcohol Consumption:
+
+Type: Categorical
+Description: Alcohol consumption level (e.g., None, Moderate, Heavy).
+Smoking Status:
+
+Type: Categorical
+Description: Smoking habits (e.g., Never, Former, Current).
+Family History of Diabetes:
+
+Type: Binary (0 or 1)
+Description:
+1 = Family history present; 0 = No family history of diabetes.
+Previous Gestational Diabetes:
+
+Type: Binary (0 or 1)
+Description:
+1 = History of gestational diabetes; 0 = No history.
+
+
+
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 21 columns):
+ #   Column                         Non-Null Count  Dtype
+---  ------                         --------------  -----
+ 0   Unnamed: 0                     10000 non-null  int64
+ 1   Age                            10000 non-null  int64
+ 2   Sex                            10000 non-null  object
+ 3   Ethnicity                      10000 non-null  object
+ 4   BMI                            10000 non-null  float64
+ 5   Waist_Circumference            10000 non-null  float64
+ 6   Fasting_Blood_Glucose          10000 non-null  float64
+ 7   HbA1c                          10000 non-null  float64
+ 8   Blood_Pressure_Systolic        10000 non-null  int64
+ 9   Blood_Pressure_Diastolic       10000 non-null  int64
+ 10  Cholesterol_Total              10000 non-null  float64
+ 11  Cholesterol_HDL                10000 non-null  float64
+ 12  Cholesterol_LDL                10000 non-null  float64
+ 13  GGT                            10000 non-null  float64
+ 14  Serum_Urate                    10000 non-null  float64
+ 15  Physical_Activity_Level        10000 non-null  object
+ 16  Dietary_Intake_Calories        10000 non-null  int64
+ 17  Alcohol_Consumption            6680 non-null   object
+ 18  Smoking_Status                 10000 non-null  object
+ 19  Family_History_of_Diabetes     10000 non-null  int64
+ 20  Previous_Gestational_Diabetes  10000 non-null  int64
+dtypes: float64(9), int64(7), object(5)
+memory usage: 1.6+ MB
+None
+Unnamed: 0                       10000
+Age                              10000
+Sex                              10000
+Ethnicity                        10000
+BMI                              10000
+Waist_Circumference              10000
+Fasting_Blood_Glucose            10000
+HbA1c                            10000
+Blood_Pressure_Systolic          10000
+Blood_Pressure_Diastolic         10000
+Cholesterol_Total                10000
+Cholesterol_HDL                  10000
+Cholesterol_LDL                  10000
+GGT                              10000
+Serum_Urate                      10000
+Physical_Activity_Level          10000
+Dietary_Intake_Calories          10000
+Alcohol_Consumption              10000
+Smoking_Status                   10000
+Family_History_of_Diabetes       10000
+Previous_Gestational_Diabetes    10000
+dtype: int64
+    Unnamed: 0  Age  ... Family_History_of_Diabetes Previous_Gestational_Diabetes
+0            0   58  ...                          0                             1
+1            1   48  ...                          0                             1
+2            2   34  ...                          1                             0
+3            3   62  ...                          1                             0
+4            4   27  ...                          0                             0
+5            5   40  ...                          1                             1
+6            6   58  ...                          0                             0
+7            7   38  ...                          0                             1
+8            8   42  ...                          1                             0
+9            9   30  ...                          1                             0
+10          10   30  ...                          1                             0
+11          11   43  ...                          1                             1
+12          12   55  ...                          0                             0
+13          13   59  ...                          0                             0
+14          14   43  ...                          1                             0
+15          15   22  ...                          1                             1
+16          16   41  ...                          1                             1
+17          17   21  ...                          1                             1
+18          18   43  ...                          1                             1
+19          19   63  ...                          0                             1
+20          20   49  ...                          1                             1
+21          21   57  ...                          1                             0
+22          22   21  ...                          1                             0
+23          23   40  ...                          0                             0
+24          24   52  ...                          0                             0
+25          25   31  ...                          1                             0
+26          26   41  ...                          0                             1
+27          27   63  ...                          0                             1
+28          28   44  ...                          0                             1
+29          29   68  ...                          1                             0
+
+[30 rows x 21 columns]
+colonna: Unnamed: 0
+count    10000.00000
+mean      4999.50000
+std       2886.89568
+min          0.00000
+25%       2499.75000
+50%       4999.50000
+75%       7499.25000
+max       9999.00000
+Name: Unnamed: 0, dtype: float64
+
+colonna: Age
+count    10000.000000
+mean        44.620400
+std         14.343489
+min         20.000000
+25%         32.000000
+50%         45.000000
+75%         57.000000
+max         69.000000
+Name: Age, dtype: float64
+
+colonna: Sex
+count      10000
+unique         2
+top       Female
+freq        5005
+Name: Sex, dtype: object
+
+colonna: Ethnicity
+count     10000
+unique        4
+top       Black
+freq       2539
+Name: Ethnicity, dtype: object
+
+colonna: BMI
+count    10000.000000
+mean        29.418150
+std          6.170866
+min         18.500000
+25%         24.100000
+50%         29.500000
+75%         34.700000
+max         40.000000
+Name: BMI, dtype: float64
+
+colonna: Waist_Circumference
+count    10000.00000
+mean        94.79707
+std         14.38329
+min         70.00000
+25%         82.20000
+50%         94.90000
+75%        107.00000
+max        120.00000
+Name: Waist_Circumference, dtype: float64
+
+colonna: Fasting_Blood_Glucose
+count    10000.000000
+mean       134.776210
+std         37.633544
+min         70.000000
+25%        102.175000
+50%        134.500000
+75%        167.800000
+max        200.000000
+Name: Fasting_Blood_Glucose, dtype: float64
+
+colonna: HbA1c
+count    10000.000000
+mean         9.507510
+std          3.176421
+min          4.000000
+25%          6.800000
+50%          9.500000
+75%         12.300000
+max         15.000000
+Name: HbA1c, dtype: float64
+
+colonna: Blood_Pressure_Systolic
+count    10000.000000
+mean       134.163700
+std         26.110317
+min         90.000000
+25%        112.000000
+50%        134.000000
+75%        157.000000
+max        179.000000
+Name: Blood_Pressure_Systolic, dtype: float64
+
+colonna: Blood_Pressure_Diastolic
+count    10000.000000
+mean        89.558700
+std         17.237792
+min         60.000000
+25%         75.000000
+50%         89.000000
+75%        105.000000
+max        119.000000
+Name: Blood_Pressure_Diastolic, dtype: float64
+
+colonna: Cholesterol_Total
+count    10000.000000
+mean       225.165540
+std         42.963744
+min        150.000000
+25%        187.875000
+50%        225.500000
+75%        262.400000
+max        300.000000
+Name: Cholesterol_Total, dtype: float64
+
+colonna: Cholesterol_HDL
+count    10000.000000
+mean        55.019340
+std         14.537371
+min         30.000000
+25%         42.300000
+50%         55.200000
+75%         67.900000
+max         80.000000
+Name: Cholesterol_HDL, dtype: float64
+
+colonna: Cholesterol_LDL
+count    10000.00000
+mean       134.35377
+std         37.50238
+min         70.00000
+25%        101.67500
+50%        134.40000
+75%        166.40000
+max        200.00000
+Name: Cholesterol_LDL, dtype: float64
+
+colonna: GGT
+count    10000.00000
+mean        55.16822
+std         25.88180
+min         10.00000
+25%         32.60000
+50%         55.45000
+75%         77.50000
+max        100.00000
+Name: GGT, dtype: float64
+
+colonna: Serum_Urate
+count    10000.000000
+mean         5.503430
+std          1.455091
+min          3.000000
+25%          4.200000
+50%          5.500000
+75%          6.800000
+max          8.000000
+Name: Serum_Urate, dtype: float64
+
+colonna: Physical_Activity_Level
+count     10000
+unique        3
+top         Low
+freq       3372
+Name: Physical_Activity_Level, dtype: object
+
+colonna: Dietary_Intake_Calories
+count    10000.000000
+mean      2742.481900
+std        716.643803
+min       1500.000000
+25%       2129.000000
+50%       2727.000000
+75%       3368.000000
+max       3999.000000
+Name: Dietary_Intake_Calories, dtype: float64
+
+colonna: Alcohol_Consumption
+count         6680
+unique           2
+top       Moderate
+freq          3373
+Name: Alcohol_Consumption, dtype: object
+
+colonna: Smoking_Status
+count       10000
+unique          3
+top       Current
+freq         3364
+Name: Smoking_Status, dtype: object
+
+colonna: Family_History_of_Diabetes
+count    10000.000000
+mean         0.507000
+std          0.499976
+min          0.000000
+25%          0.000000
+50%          1.000000
+75%          1.000000
+max          1.000000
+Name: Family_History_of_Diabetes, dtype: float64
+
+colonna: Previous_Gestational_Diabetes
+count    10000.000000
+mean         0.516500
+std          0.499753
+min          0.000000
+25%          0.000000
+50%          1.000000
+75%          1.000000
+max          1.000000
+Name: Previous_Gestational_Diabetes, dtype: float64
